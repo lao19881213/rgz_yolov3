@@ -1,13 +1,13 @@
 import xml.etree.ElementTree as ET
 from os import getcwd
 
-#sets=[('2007', 'train'), ('2007', 'val'), ('2007', 'test')]
-sets=[('2007', 'train')]
+sets=[('2007', 'train'), ('2007', 'val'), ('2007', 'test')]
+
 classes = ["1_1", "1_2", "1_3", "2_2", "2_3", "3_3"]
 
 
 def convert_annotation(year, image_id, list_file):
-    in_file = open('VOC%s/Annotations/%s.xml'%(year, image_id))
+    in_file = open('data/Annotations/%s.xml'%(image_id))
     tree=ET.parse(in_file)
     root = tree.getroot()
 
@@ -24,10 +24,10 @@ def convert_annotation(year, image_id, list_file):
 wd = getcwd()
 
 for year, image_set in sets:
-    image_ids = open('VOC%s/ImageSets/Main/%s.txt'%(year, image_set)).read().strip().split()
-    list_file = open('%s_%s.txt'%(year, image_set), 'w')
+    image_ids = open('data/ImageSets/Main/%s.txt'%(image_set)).read().strip().split()
+    list_file = open('%s.txt'%(image_set), 'w')
     for image_id in image_ids:
-        list_file.write('%s/VOC%s/JPEGImages/%s.png'%(wd, year, image_id))
+        list_file.write('%s/data/JPEGImages/%s.png'%(wd, image_id))
         convert_annotation(year, image_id, list_file)
         list_file.write('\n')
     list_file.close()

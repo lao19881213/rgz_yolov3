@@ -22,7 +22,7 @@ import glob
 class YOLO(object):
     _defaults = {
         "model_path": 'logs/000/trained_weights_final.h5',
-        "anchors_path": 'model_data/yolo_anchors.txt',
+        "anchors_path": 'model_data/tiny_yolo_anchors.txt',
         "classes_path": 'model_data/voc_classes.txt',
         "score" : 0.3,
         "iou" : 0.45,

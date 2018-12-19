@@ -51,5 +51,5 @@ Each detected box denotes an identified radio source, and its morphology is succ
 To train your own RGZ model on GPU node managed by the SLURM job scheduler. You will need to change resources, paths, and module names based on the configuration of your own cluster.
 
 ##test results
-![Image text](https://github.com/lao19881213/rgz_yolov3/master/rgz_yolov3/output/FIRSTJ000007.0+081644_logminmax.png)
+![Image text](https://github.com/lao19881213/rgz_yolov3/tree/master/output/FIRSTJ000007.0+081644_logminmax.png)
 

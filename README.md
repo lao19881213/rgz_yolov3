@@ -1,10 +1,10 @@
 # rgz_yolov3
 
-Radio Galaxy Zoo: ClaRAN - Radio Morphologies Classifing using Deep Learning
+Radio Galaxy Zoo: CRAY - Radio Morphologies Classifing using Deep Learning
 
 ## Introduction
 
-ClaRAN - Classifying Radio sources Automatically with Neural networks - is a proof-of-concept radio source morphology classifier based upon the YOLOv3. ClaRAN is the first publicly available radio source morphology classifier that is capable of associating discrete and extended components of radio sources in an automated fashion. The promising results from ClaRAN have implications for the further development of efficient cross-wavelength source identification, matching, and morphology classifications for future radio surveys.
+CRAY - Classifying Radio sources Automatically with Yolov3 - is a proof-of-concept radio source morphology classifier based upon the YOLOv3. CRAY is the first publicly available radio source morphology classifier that is capable of associating discrete and extended components of radio sources in an automated fashion. The promising results from CRAY have implications for the further development of efficient cross-wavelength source identification, matching, and morphology classifications for future radio surveys.
 
 
 ---
@@ -49,3 +49,9 @@ Each detected box denotes an identified radio source, and its morphology is succ
    2.python train.py
 
 To train your own RGZ model on GPU node managed by the SLURM job scheduler. You will need to change resources, paths, and module names based on the configuration of your own cluster.
+
+---
+
+## test results
+<img src="output/FIRSTJ000007.0+081644_logminmax.png" width="800">
+

@@ -53,5 +53,5 @@ To train your own RGZ model on GPU node managed by the SLURM job scheduler. You 
 ---
 
 ## test results
-<img src="https://github.com/lao19881213/rgz_yolov3/tree/master/output/FIRSTJ000007.0+081644_logminmax.png" width="800">
+<img src="output/FIRSTJ000007.0+081644_logminmax.png" width="800">
 

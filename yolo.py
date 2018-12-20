@@ -130,11 +130,18 @@ class YOLO(object):
         font = ImageFont.truetype(font='font/FiraMono-Medium.otf',
                     size=np.floor(3e-2 * image.size[1] + 0.5).astype('int32'))
         thickness = (image.size[0] + image.size[1]) // 300
-
+        predicted_class_re = []
+        score_re = []
+        top_re = [] 
+        left_re =[]  
+        bottom_re = [] 
+        right_re = [] 
         for i, c in reversed(list(enumerate(out_classes))):
             predicted_class = self.class_names[c]
+            predicted_class_re.append(predicted_class)
             box = out_boxes[i]
             score = out_scores[i]
+            score_re.append(score)
 
             label = '{} {:.2f}'.format(predicted_class, score)
             draw = ImageDraw.Draw(image)
@@ -162,10 +169,15 @@ class YOLO(object):
                 fill=255) #self.colors[c]
             draw.text(text_origin, label, fill=(0, 0, 0), font=font)
             del draw
+            
+            top_re.append(top)
+            right_re.append(right)
+            bottom_re.append(bottom)
+            left_re.append(left)
 
         end = timer()
         print(end - start)
-        return image
+        return image, predicted_class_re, score_re, left_re, top_re, right_re, bottom_re
 
     def close_session(self):
         self.sess.close()

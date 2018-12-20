@@ -13,7 +13,8 @@ def detect_img(yolo):
     outdir = "output"
     for jpgfile in glob.glob(path):
         img = Image.open(jpgfile)
-        img = yolo.detect_image(img)
+        img, predicted_class, score, left, top, right, bottom = yolo.detect_image(img)
+       # img = yolo.detect_image(img)
         print(jpgfile)
 #    '''
 #        plt.figure()

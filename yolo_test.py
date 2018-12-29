@@ -24,22 +24,22 @@ def detect_img(yolo):
         img, predicted_class, score, left, top, right, bottom = yolo.detect_image(img)
         for cl in range(len(predicted_class)):
             if predicted_class[cl] == "1C_1P":
-               list_file1.write('%s.png %f %s %s %s %s'  %(image_id,score[cl], left[cl], top[cl], right[cl], bottom[cl]))
+               list_file1.write('%f'  %(score[cl]))
                list_file1.write('\n')
             elif predicted_class[cl] == "1C_2P":
-               list_file2.write('%s.png %f %s %s %s %s'  %(image_id,score[cl], left[cl], top[cl], right[cl], bottom[cl]))
+               list_file2.write('%f'  %(score[cl]))
                list_file2.write('\n')
             elif predicted_class[cl] == "1C_3P":
-               list_file3.write('%s.png %f %s %s %s %s'  %(image_id,score[cl], left[cl], top[cl], right[cl], bottom[cl]))
+               list_file3.write('%f'  %(score[cl]))
                list_file3.write('\n')
             elif predicted_class[cl] == "2C_2P":
-               list_file4.write('%s.png %f %s %s %s %s'  %(image_id,score[cl], left[cl], top[cl], right[cl], bottom[cl]))
+               list_file4.write('%f'  %(score[cl]))
                list_file4.write('\n')
             elif predicted_class[cl] == "2C_3P":
-               list_file5.write('%s.png %f %s %s %s %s'  %(image_id,score[cl], left[cl], top[cl], right[cl], bottom[cl]))
+               list_file5.write('%f'  %(score[cl]))
                list_file5.write('\n')
             elif predicted_class[cl] == "3C_3P":
-               list_file6.write('%s.png %f %s %s %s %s'  %(image_id,score[cl], left[cl], top[cl], right[cl], bottom[cl]))
+               list_file6.write('%f'  %(score[cl]))
                list_file6.write('\n')
 
     list_file1.close()

@@ -9,18 +9,18 @@ import matplotlib.pyplot as plt
 
 
 def detect_img(yolo):
-    image_ids = open('VOC2007/ImageSets/Main/test.txt').read().strip().split()
+    image_ids = open('data/ImageSets/Main/test.txt').read().strip().split()
    # path = "comfig/*.png"
     outdir = "output"
-    list_file1 = open('VOC2007/1C_1P.txt', 'w')
-    list_file2 = open('VOC2007/1C_2P.txt', 'w')
-    list_file3 = open('VOC2007/1C_3P.txt', 'w')
-    list_file4 = open('VOC2007/2C_2P.txt', 'w')
-    list_file5 = open('VOC2007/2C_3P.txt', 'w')
-    list_file6 = open('VOC2007/3C_3P.txt', 'w')
+    list_file1 = open('data/1C_1P.txt', 'w')
+    list_file2 = open('data/1C_2P.txt', 'w')
+    list_file3 = open('data/1C_3P.txt', 'w')
+    list_file4 = open('data/2C_2P.txt', 'w')
+    list_file5 = open('data/2C_3P.txt', 'w')
+    list_file6 = open('data/3C_3P.txt', 'w')
 
     for image_id in image_ids:
-        img = Image.open('VOC2007/JPEGImages/%s.png'%(image_id))
+        img = Image.open('data/JPEGImages/%s.png'%(image_id))
         img, predicted_class, score, left, top, right, bottom = yolo.detect_image(img)
         for cl in range(len(predicted_class)):
             if predicted_class[cl] == "1C_1P":

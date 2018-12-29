@@ -1,12 +1,13 @@
 from voc_eval import voc_eval
 import os
 
-AP1 = voc_eval('/home/kch/keras-yolo3/VOC2007/1C_1P.txt', '/home/kch/keras-yolo3/VOC2007/Annotations/{}.xml', '/home/kch/keras-yolo3/VOC2007/ImageSets/Main/test.txt', '1C_1P', '.')
-AP2 = voc_eval('/home/kch/keras-yolo3/VOC2007/1C_2P.txt', '/home/kch/keras-yolo3/VOC2007/Annotations/{}.xml', '/home/kch/keras-yolo3/VOC2007/ImageSets/Main/test.txt', '1C_2P', '.')
-AP3 = voc_eval('/home/kch/keras-yolo3/VOC2007/1C_3P.txt', '/home/kch/keras-yolo3/VOC2007/Annotations/{}.xml', '/home/kch/keras-yolo3/VOC2007/ImageSets/Main/test.txt', '1C_3P', '.')
-AP4 = voc_eval('/home/kch/keras-yolo3/VOC2007/2C_2P.txt', '/home/kch/keras-yolo3/VOC2007/Annotations/{}.xml', '/home/kch/keras-yolo3/VOC2007/ImageSets/Main/test.txt', '2C_2P', '.')
-AP5 = voc_eval('/home/kch/keras-yolo3/VOC2007/2C_3P.txt', '/home/kch/keras-yolo3/VOC2007/Annotations/{}.xml', '/home/kch/keras-yolo3/VOC2007/ImageSets/Main/test.txt', '2C_3P', '.')
-AP6 = voc_eval('/home/kch/keras-yolo3/VOC2007/3C_3P.txt', '/home/kch/keras-yolo3/VOC2007/Annotations/{}.xml', '/home/kch/keras-yolo3/VOC2007/ImageSets/Main/test.txt', '3C_3P', '.')
+wd = getcwd()
+AP1 = voc_eval('%s/data/1C_1P.txt'%(wd), '%s/data/Annotations/{}.xml'%(wd), '%s/data/ImageSets/Main/test.txt'%(wd), '1C_1P', '.')
+AP2 = voc_eval('%s/data/1C_2P.txt'%(wd), '%s/data/Annotations/{}.xml'%(wd), '%s/data/ImageSets/Main/test.txt'%(wd), '1C_2P', '.')
+AP3 = voc_eval('%s/data/1C_3P.txt'%(wd), '%s/data/Annotations/{}.xml'%(wd), '%s/data/ImageSets/Main/test.txt'%(wd), '1C_3P', '.')
+AP4 = voc_eval('%s/data/2C_2P.txt'%(wd), '%s/data/Annotations/{}.xml'%(wd), '%s/data/ImageSets/Main/test.txt'%(wd), '2C_2P', '.')
+AP5 = voc_eval('%s/data/2C_3P.txt'%(wd), '%s/data/Annotations/{}.xml'%(wd), '%s/data/ImageSets/Main/test.txt'%(wd), '2C_3P', '.')
+AP6 = voc_eval('%s/data/3C_3P.txt'%(wd), '%s/data/Annotations/{}.xml'%(wd), '%s/data/ImageSets/Main/test.txt'%(wd), '3C_3P', '.')
 
 mAP=[]
 mAP.append(AP1)

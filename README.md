@@ -4,7 +4,7 @@ Radio Galaxy Zoo: CRAY - Radio Morphologies Classifing using Deep Learning
 
 ## Introduction
 
-ClaRAY - Classifying Radio sources Automatically with Yolov3 - is a proof-of-concept radio source morphology classifier based upon the YOLOv3. CRAY is the second publicly available radio source morphology classifier that is capable of associating discrete and extended components of radio sources in an automated fashion. The promising results from CRAY have implications for the further development of efficient cross-wavelength source identification, matching, and morphology classifications for future radio surveys.
+ClaRAY - **Cla**ssifying **R**adio sources **A**utomatically with **Y**olov3 - is a proof-of-concept radio source morphology classifier based upon the YOLOv3. CRAY is the second publicly available radio source morphology classifier that is capable of associating discrete and extended components of radio sources in an automated fashion. The promising results from CRAY have implications for the further development of efficient cross-wavelength source identification, matching, and morphology classifications for future radio surveys.
 
 
 ---

@@ -7,3 +7,4 @@ yolo3/__pycache__/
 VOC2007/
 data/JPEGImages
 data/Annotations
+logs
